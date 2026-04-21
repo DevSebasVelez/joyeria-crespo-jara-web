@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cinzel, Manrope } from "next/font/google";
+import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
 import "./globals.css";
 
 const display = Cinzel({
@@ -30,7 +31,10 @@ export default function RootLayout({
       lang="es"
       className={`${display.variable} ${body.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppFloatingButton />
+      </body>
     </html>
   );
 }
