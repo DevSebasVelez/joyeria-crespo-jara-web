@@ -1,11 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const INSIGHTS = [
   {
@@ -27,24 +23,13 @@ const INSIGHTS = [
 
 export default function HomeMaterialsInsightsSection() {
   const rootRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".head"), { autoAlpha: 0, y: 24 });
-      gsap.set(q(".card"), { autoAlpha: 0, y: 24 });
-      gsap
-        .timeline({
-          scrollTrigger: { trigger: rootRef.current, start: "top 78%" },
-        })
-        .to(q(".head"), { autoAlpha: 1, y: 0, duration: 0.55 })
-        .to(
-          q(".card"),
-          { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.08 },
-          0.15,
-        );
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [
+      { selector: ".head", direction: "up", duration: 0.58 },
+      { selector: ".card", direction: "left", duration: 0.6, stagger: 0.1 },
+    ],
+    { start: "top 78%" },
   );
 
   return (

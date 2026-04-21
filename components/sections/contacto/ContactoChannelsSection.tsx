@@ -1,12 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const CHANNELS = [
   {
@@ -31,19 +27,17 @@ const CHANNELS = [
 
 export default function ContactoChannelsSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".channel"), { autoAlpha: 0, y: 22 });
-      gsap.to(q(".channel"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.5,
-        stagger: 0.08,
-        scrollTrigger: { trigger: rootRef.current, start: "top 80%" },
-      });
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [
+      {
+        selector: ".channel",
+        direction: "left",
+        duration: 0.58,
+        stagger: 0.11,
+      },
+    ],
+    { start: "top 80%" },
   );
   return (
     <section ref={rootRef} className="bg-[#f8f1e8] py-24">

@@ -1,27 +1,14 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function MaterialesCareSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".card"), { autoAlpha: 0, y: 24 });
-      gsap.to(q(".card"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.5,
-        stagger: 0.1,
-        scrollTrigger: { trigger: rootRef.current, start: "top 80%" },
-      });
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [{ selector: ".card", direction: "right", duration: 0.6, stagger: 0.14 }],
+    { start: "top 80%" },
   );
   return (
     <section ref={rootRef} className="bg-[#fff8ef] py-24">

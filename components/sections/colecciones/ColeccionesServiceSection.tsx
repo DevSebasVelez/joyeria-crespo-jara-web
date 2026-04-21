@@ -1,27 +1,21 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function ColeccionesServiceSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".service"), { autoAlpha: 0, y: 24 });
-      gsap.to(q(".service"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.5,
-        stagger: 0.08,
-        scrollTrigger: { trigger: rootRef.current, start: "top 78%" },
-      });
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [
+      {
+        selector: ".service",
+        direction: "left",
+        duration: 0.58,
+        stagger: 0.11,
+      },
+    ],
+    { start: "top 78%" },
   );
   return (
     <section ref={rootRef} className="bg-[#fff8ef] py-24">

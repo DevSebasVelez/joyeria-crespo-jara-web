@@ -1,12 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiChevronDown } from "react-icons/fi";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const GUIDE = [
   {
@@ -26,24 +22,13 @@ const GUIDE = [
 export default function HomeJewelryCareGuideSection() {
   const rootRef = useRef<HTMLElement>(null);
   const [open, setOpen] = useState(0);
-
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".head"), { autoAlpha: 0, y: 24 });
-      gsap.set(q(".item"), { autoAlpha: 0, y: 24 });
-      gsap
-        .timeline({
-          scrollTrigger: { trigger: rootRef.current, start: "top 78%" },
-        })
-        .to(q(".head"), { autoAlpha: 1, y: 0, duration: 0.55 })
-        .to(
-          q(".item"),
-          { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.08 },
-          0.15,
-        );
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [
+      { selector: ".head", direction: "right", duration: 0.58 },
+      { selector: ".item", direction: "left", duration: 0.62, stagger: 0.1 },
+    ],
+    { start: "top 78%" },
   );
 
   return (

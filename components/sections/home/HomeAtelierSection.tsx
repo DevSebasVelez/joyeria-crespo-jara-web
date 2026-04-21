@@ -3,27 +3,17 @@
 import Link from "next/link";
 import { useRef } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function HomeAtelierSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".copy"), { autoAlpha: 0, x: -24 });
-      gsap.set(q(".media"), { autoAlpha: 0, x: 24 });
-      gsap
-        .timeline({
-          scrollTrigger: { trigger: rootRef.current, start: "top 76%" },
-        })
-        .to(q(".copy"), { autoAlpha: 1, x: 0, duration: 0.55 })
-        .to(q(".media"), { autoAlpha: 1, x: 0, duration: 0.6 }, 0.1);
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [
+      { selector: ".copy", direction: "right", duration: 0.58 },
+      { selector: ".media", direction: "left", duration: 0.62, at: 0.12 },
+    ],
+    { start: "top 76%" },
   );
 
   return (

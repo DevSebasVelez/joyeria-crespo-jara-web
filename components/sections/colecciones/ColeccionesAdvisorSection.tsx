@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 type Purpose = "regalo" | "uso-diario" | "evento";
 type Budget = "medio" | "alto" | "premium";
@@ -41,6 +42,7 @@ const fallback = {
 };
 
 export default function ColeccionesAdvisorSection() {
+  const rootRef = useRef<HTMLElement>(null);
   const [purpose, setPurpose] = useState<Purpose>("regalo");
   const [budget, setBudget] = useState<Budget>("medio");
   const [style, setStyle] = useState<Style>("minimalista");
@@ -49,10 +51,24 @@ export default function ColeccionesAdvisorSection() {
     return RECOMMENDATIONS[`${purpose}-${budget}-${style}`] ?? fallback;
   }, [purpose, budget, style]);
 
+  useScrollStairReveal(
+    rootRef,
+    [
+      { selector: ".advisor-form", direction: "right", duration: 0.62 },
+      {
+        selector: ".advisor-result",
+        direction: "left",
+        duration: 0.64,
+        at: 0.12,
+      },
+    ],
+    { start: "top 78%" },
+  );
+
   return (
-    <section className="bg-[#17110c] py-24">
+    <section ref={rootRef} className="bg-[#17110c] py-24">
       <div className="mx-auto grid w-[min(92%,1200px)] gap-8 lg:grid-cols-2">
-        <article className="rounded-4xl border border-[#4b3926] bg-[#21170f] p-8">
+        <article className="advisor-form rounded-4xl border border-[#4b3926] bg-[#21170f] p-8">
           <p className="text-xs tracking-[0.2em] text-[#d3b587] uppercase">
             Asesor inteligente
           </p>
@@ -109,7 +125,7 @@ export default function ColeccionesAdvisorSection() {
           </div>
         </article>
 
-        <article className="rounded-4xl border border-[#4b3926] bg-[#241a12] p-8">
+        <article className="advisor-result rounded-4xl border border-[#4b3926] bg-[#241a12] p-8">
           <p className="text-xs tracking-[0.16em] text-[#d3b587] uppercase">
             Recomendacion inicial
           </p>

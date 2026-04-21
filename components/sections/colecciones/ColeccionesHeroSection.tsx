@@ -2,27 +2,13 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(useGSAP);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function ColeccionesHeroSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".item"), { autoAlpha: 0, y: 22 });
-      gsap.to(q(".item"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.55,
-        stagger: 0.08,
-        delay: 0.15,
-      });
-    },
-    { scope: rootRef },
-  );
+  useScrollStairReveal(rootRef, [
+    { selector: ".item", direction: "right", duration: 0.6, stagger: 0.11 },
+  ]);
 
   return (
     <section

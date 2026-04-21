@@ -2,12 +2,8 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaAward, FaCrown, FaGem, FaHandshake } from "react-icons/fa";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const VALUES = [
   { title: "Excelencia", icon: FaAward },
@@ -18,19 +14,10 @@ const VALUES = [
 
 export default function NosotrosValuesGallerySection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".item"), { autoAlpha: 0, y: 26 });
-      gsap.to(q(".item"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.55,
-        stagger: 0.08,
-        scrollTrigger: { trigger: rootRef.current, start: "top 78%" },
-      });
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [{ selector: ".item", direction: "zoom", duration: 0.66, stagger: 0.16 }],
+    { start: "top 78%" },
   );
   return (
     <section ref={rootRef} className="bg-[#fff9f0] py-24">

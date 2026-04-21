@@ -1,27 +1,13 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(useGSAP);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function ContactoHeroSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".item"), { autoAlpha: 0, y: 20 });
-      gsap.to(q(".item"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.55,
-        stagger: 0.08,
-        delay: 0.15,
-      });
-    },
-    { scope: rootRef },
-  );
+  useScrollStairReveal(rootRef, [
+    { selector: ".item", direction: "right", duration: 0.6, stagger: 0.11 },
+  ]);
   return (
     <section ref={rootRef} className="bg-[#120e0a] pt-36 pb-20">
       <div className="mx-auto w-[min(92%,1200px)]">

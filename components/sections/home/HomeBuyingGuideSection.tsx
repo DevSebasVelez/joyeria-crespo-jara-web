@@ -2,11 +2,7 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const STEPS = [
   {
@@ -28,24 +24,13 @@ const STEPS = [
 
 export default function HomeBuyingGuideSection() {
   const rootRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".head"), { autoAlpha: 0, y: 20 });
-      gsap.set(q(".step"), { autoAlpha: 0, y: 24 });
-      gsap
-        .timeline({
-          scrollTrigger: { trigger: rootRef.current, start: "top 78%" },
-        })
-        .to(q(".head"), { autoAlpha: 1, y: 0, duration: 0.55 })
-        .to(
-          q(".step"),
-          { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.1 },
-          0.14,
-        );
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [
+      { selector: ".head", direction: "down", amount: 22, duration: 0.55 },
+      { selector: ".step", direction: "left", duration: 0.6, stagger: 0.12 },
+    ],
+    { start: "top 78%" },
   );
 
   return (

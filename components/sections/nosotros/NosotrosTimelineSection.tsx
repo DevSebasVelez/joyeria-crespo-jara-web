@@ -1,11 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const MILESTONES = [
   {
@@ -25,19 +21,17 @@ const MILESTONES = [
 
 export default function NosotrosTimelineSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".milestone"), { autoAlpha: 0, y: 20 });
-      gsap.to(q(".milestone"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.5,
-        stagger: 0.08,
-        scrollTrigger: { trigger: rootRef.current, start: "top 78%" },
-      });
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [
+      {
+        selector: ".milestone",
+        direction: "left",
+        duration: 0.58,
+        stagger: 0.11,
+      },
+    ],
+    { start: "top 78%" },
   );
   return (
     <section ref={rootRef} className="bg-[#1a130d] py-24">

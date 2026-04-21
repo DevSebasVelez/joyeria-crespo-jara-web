@@ -2,11 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const IMAGES = [
   "/images/gallery/DSC09462.jpg",
@@ -18,21 +14,10 @@ const IMAGES = [
 
 export default function HomeLuxuryGridSection() {
   const rootRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".item"), { autoAlpha: 0, y: 30, scale: 0.98 });
-      gsap.to(q(".item"), {
-        autoAlpha: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.6,
-        stagger: 0.08,
-        scrollTrigger: { trigger: rootRef.current, start: "top 76%" },
-      });
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [{ selector: ".item", direction: "zoom", duration: 0.66, stagger: 0.12 }],
+    { start: "top 76%" },
   );
 
   return (

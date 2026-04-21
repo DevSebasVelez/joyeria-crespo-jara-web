@@ -1,27 +1,14 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function NosotrosMissionVisionSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".card"), { autoAlpha: 0, y: 28 });
-      gsap.to(q(".card"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.55,
-        stagger: 0.1,
-        scrollTrigger: { trigger: rootRef.current, start: "top 78%" },
-      });
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [{ selector: ".card", direction: "right", duration: 0.62, stagger: 0.14 }],
+    { start: "top 78%" },
   );
   return (
     <section ref={rootRef} className="bg-[#f6efe5] py-24">

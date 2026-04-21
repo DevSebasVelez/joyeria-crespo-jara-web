@@ -1,27 +1,17 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function ContactoMapSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".head"), { autoAlpha: 0, y: 18 });
-      gsap.set(q(".map"), { autoAlpha: 0, y: 24 });
-      gsap
-        .timeline({
-          scrollTrigger: { trigger: rootRef.current, start: "top 80%" },
-        })
-        .to(q(".head"), { autoAlpha: 1, y: 0, duration: 0.5 })
-        .to(q(".map"), { autoAlpha: 1, y: 0, duration: 0.55 }, 0.12);
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [
+      { selector: ".head", direction: "down", amount: 20, duration: 0.56 },
+      { selector: ".map", direction: "up", duration: 0.62, at: 0.12 },
+    ],
+    { start: "top 80%" },
   );
   return (
     <section ref={rootRef} className="bg-[#fffaf3] py-24">

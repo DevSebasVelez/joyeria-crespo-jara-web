@@ -2,27 +2,14 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function MaterialesProcessSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap.set(q(".item"), { autoAlpha: 0, y: 24 });
-      gsap.to(q(".item"), {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.55,
-        stagger: 0.1,
-        scrollTrigger: { trigger: rootRef.current, start: "top 78%" },
-      });
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [{ selector: ".item", direction: "right", duration: 0.62, stagger: 0.14 }],
+    { start: "top 78%" },
   );
   return (
     <section ref={rootRef} className="bg-[#17110c] py-24">

@@ -2,28 +2,14 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 export default function MaterialesCtaSection() {
   const rootRef = useRef<HTMLElement>(null);
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        rootRef.current,
-        { autoAlpha: 0, y: 20 },
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 0.55,
-          scrollTrigger: { trigger: rootRef.current, start: "top 84%" },
-        },
-      );
-    },
-    { scope: rootRef },
+  useScrollStairReveal(
+    rootRef,
+    [{ selector: "section > div", direction: "up", duration: 0.58 }],
+    { start: "top 84%" },
   );
   return (
     <section ref={rootRef} className="bg-[#100c08] py-20">

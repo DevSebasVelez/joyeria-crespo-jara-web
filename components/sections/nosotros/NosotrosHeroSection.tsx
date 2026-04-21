@@ -15,13 +15,17 @@ export default function NosotrosHeroSection() {
     () => {
       const q = gsap.utils.selector(rootRef);
       gsap.set(bgRef.current, { scale: 1.06 });
-      gsap.set(q(".hero-item"), { autoAlpha: 0, y: 24 });
+      gsap.set(q(".hero-item"), {
+        autoAlpha: 0,
+        y: 20,
+        x: (index: number) => (index % 2 === 0 ? -24 : 24),
+      });
       gsap
         .timeline()
-        .to(bgRef.current, { scale: 1, duration: 1.9 })
+        .to(bgRef.current, { scale: 1, duration: 1.9, ease: "power2.out" })
         .to(
           q(".hero-item"),
-          { autoAlpha: 1, y: 0, duration: 0.55, stagger: 0.08 },
+          { autoAlpha: 1, y: 0, x: 0, duration: 0.6, stagger: 0.11 },
           0.2,
         );
     },
