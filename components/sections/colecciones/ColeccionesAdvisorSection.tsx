@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
+import gsap from "gsap";
 
 type Purpose = "regalo" | "uso-diario" | "evento";
 type Budget = "medio" | "alto" | "premium";
@@ -43,6 +44,8 @@ const fallback = {
 
 export default function ColeccionesAdvisorSection() {
   const rootRef = useRef<HTMLElement>(null);
+  const resultRef = useRef<HTMLElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
   const [purpose, setPurpose] = useState<Purpose>("regalo");
   const [budget, setBudget] = useState<Budget>("medio");
   const [style, setStyle] = useState<Style>("minimalista");
@@ -65,6 +68,41 @@ export default function ColeccionesAdvisorSection() {
     { start: "top 78%" },
   );
 
+  const animateResultRefresh = () => {
+    if (resultRef.current) {
+      gsap.fromTo(
+        resultRef.current,
+        { y: 10, autoAlpha: 0.85 },
+        { y: 0, autoAlpha: 1, duration: 0.36, ease: "power2.out" },
+      );
+    }
+    if (glowRef.current) {
+      gsap.fromTo(
+        glowRef.current,
+        { autoAlpha: 0.4, scale: 0.95 },
+        { autoAlpha: 0, scale: 1.04, duration: 0.55, ease: "power2.out" },
+      );
+    }
+  };
+
+  const handleSelectFocus = (target: HTMLSelectElement) => {
+    gsap.to(target, {
+      borderColor: "#d8bc8d",
+      boxShadow: "0 0 0 3px rgba(219,195,154,0.2)",
+      duration: 0.24,
+      ease: "power2.out",
+    });
+  };
+
+  const handleSelectBlur = (target: HTMLSelectElement) => {
+    gsap.to(target, {
+      borderColor: "#5a4530",
+      boxShadow: "0 0 0 0 rgba(219,195,154,0)",
+      duration: 0.24,
+      ease: "power2.out",
+    });
+  };
+
   return (
     <section ref={rootRef} className="bg-[#17110c] py-24">
       <div className="mx-auto grid w-[min(92%,1200px)] gap-8 lg:grid-cols-2">
@@ -84,7 +122,12 @@ export default function ColeccionesAdvisorSection() {
               Ocasion
               <select
                 value={purpose}
-                onChange={(e) => setPurpose(e.target.value as Purpose)}
+                onChange={(e) => {
+                  setPurpose(e.target.value as Purpose);
+                  animateResultRefresh();
+                }}
+                onFocus={(e) => handleSelectFocus(e.currentTarget)}
+                onBlur={(e) => handleSelectBlur(e.currentTarget)}
                 className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-[#f3dfbc]"
               >
                 {OPTIONS.purpose.map((item) => (
@@ -98,7 +141,12 @@ export default function ColeccionesAdvisorSection() {
               Rango
               <select
                 value={budget}
-                onChange={(e) => setBudget(e.target.value as Budget)}
+                onChange={(e) => {
+                  setBudget(e.target.value as Budget);
+                  animateResultRefresh();
+                }}
+                onFocus={(e) => handleSelectFocus(e.currentTarget)}
+                onBlur={(e) => handleSelectBlur(e.currentTarget)}
                 className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-[#f3dfbc]"
               >
                 {OPTIONS.budget.map((item) => (
@@ -112,7 +160,12 @@ export default function ColeccionesAdvisorSection() {
               Estilo
               <select
                 value={style}
-                onChange={(e) => setStyle(e.target.value as Style)}
+                onChange={(e) => {
+                  setStyle(e.target.value as Style);
+                  animateResultRefresh();
+                }}
+                onFocus={(e) => handleSelectFocus(e.currentTarget)}
+                onBlur={(e) => handleSelectBlur(e.currentTarget)}
                 className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-[#f3dfbc]"
               >
                 {OPTIONS.style.map((item) => (
@@ -125,7 +178,15 @@ export default function ColeccionesAdvisorSection() {
           </div>
         </article>
 
-        <article className="advisor-result rounded-4xl border border-[#4b3926] bg-[#241a12] p-8">
+        <article
+          ref={resultRef}
+          className="advisor-result relative overflow-hidden rounded-4xl border border-[#4b3926] bg-[#241a12] p-8"
+        >
+          <div
+            ref={glowRef}
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-10 bg-[radial-gradient(circle_at_center,rgba(219,195,154,0.3),transparent_60%)] opacity-0"
+          />
           <p className="text-xs tracking-[0.16em] text-[#d3b587] uppercase">
             Recomendacion inicial
           </p>

@@ -23,6 +23,7 @@ body {
   background: #f5f1ea;
   color: #14120f;
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  overflow-x: clip;
 }
 
 h1,
@@ -34,4 +35,13 @@ h4 {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100%;
 }

@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import gsap from "gsap";
 import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const GUIDE = [
@@ -22,6 +23,9 @@ const GUIDE = [
 export default function HomeJewelryCareGuideSection() {
   const rootRef = useRef<HTMLElement>(null);
   const [open, setOpen] = useState(0);
+  const contentRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const iconRefs = useRef<Array<HTMLSpanElement | null>>([]);
+
   useScrollStairReveal(
     rootRef,
     [
@@ -30,6 +34,26 @@ export default function HomeJewelryCareGuideSection() {
     ],
     { start: "top 78%" },
   );
+
+  useEffect(() => {
+    contentRefs.current.forEach((content, index) => {
+      if (!content) return;
+      gsap.to(content, {
+        height: index === open ? content.scrollHeight : 0,
+        duration: 0.42,
+        ease: "power3.inOut",
+      });
+    });
+
+    iconRefs.current.forEach((icon, index) => {
+      if (!icon) return;
+      gsap.to(icon, {
+        rotate: index === open ? 180 : 0,
+        duration: 0.34,
+        ease: "power2.out",
+      });
+    });
+  }, [open]);
 
   return (
     <section ref={rootRef} className="bg-[#130e0a] py-24">
@@ -52,17 +76,28 @@ export default function HomeJewelryCareGuideSection() {
               key={item.q}
               type="button"
               onClick={() => setOpen(index)}
+              aria-expanded={open === index}
               className="item w-full rounded-2xl border border-[#4e3a26] bg-[#21170f] p-4 text-left"
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[#f3dfbc]">{item.q}</span>
-                <FiChevronDown
-                  className={`text-[#cfb084] transition-transform ${open === index ? "rotate-180" : ""}`}
-                />
+                <span
+                  ref={(element) => {
+                    iconRefs.current[index] = element;
+                  }}
+                  className="text-[#cfb084]"
+                >
+                  <FiChevronDown />
+                </span>
               </div>
-              {open === index && (
+              <div
+                ref={(element) => {
+                  contentRefs.current[index] = element;
+                }}
+                className="h-0 overflow-hidden"
+              >
                 <p className="mt-3 text-sm text-[#d7c6ab]">{item.a}</p>
-              )}
+              </div>
             </button>
           ))}
         </div>
