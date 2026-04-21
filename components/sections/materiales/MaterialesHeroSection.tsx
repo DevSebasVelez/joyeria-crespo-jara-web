@@ -21,10 +21,10 @@ export default function MaterialesHeroSection() {
         className="object-cover opacity-35"
       />
       <div className="relative mx-auto w-[min(92%,1200px)]">
-        <p className="hero-item text-xs tracking-[0.2em] text-[#d7bc91] uppercase">
+        <p className="hero-item text-xs tracking-[0.2em] text-[#d6b98a] uppercase">
           Materiales y calidad
         </p>
-        <h1 className="hero-item mt-4 max-w-4xl text-4xl text-[#f3dfbc] md:text-6xl">
+        <h1 className="hero-item mt-4 max-w-4xl text-4xl text-white md:text-6xl">
           La calidad se define en el detalle tecnico
         </h1>
         <p className="hero-item mt-6 max-w-2xl text-white/75">

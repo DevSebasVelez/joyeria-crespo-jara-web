@@ -59,13 +59,13 @@ export default function HomeJewelryCareGuideSection() {
     <section ref={rootRef} className="bg-[#130e0a] py-24">
       <div className="mx-auto grid w-[min(92%,1200px)] gap-8 lg:grid-cols-2">
         <div className="head">
-          <p className="text-xs tracking-[0.2em] text-[#d4b587] uppercase">
+          <p className="text-xs tracking-[0.2em] text-[#d6b98a] uppercase">
             Guia de cuidado
           </p>
-          <h2 className="mt-3 text-3xl text-[#f3dfbc] md:text-5xl">
+          <h2 className="mt-3 text-3xl text-white md:text-5xl">
             Recomendaciones para preservar tus joyas
           </h2>
-          <p className="mt-4 text-[#d7c6ab]">
+          <p className="mt-4 text-white/74">
             Un cliente informado valora mejor su inversion. Esta guia resume
             practicas clave de conservacion profesional.
           </p>
@@ -80,7 +80,7 @@ export default function HomeJewelryCareGuideSection() {
               className="item w-full rounded-2xl border border-[#4e3a26] bg-[#21170f] p-4 text-left"
             >
               <div className="flex items-center justify-between gap-3">
-                <span className="text-[#f3dfbc]">{item.q}</span>
+                <span className="text-white/92">{item.q}</span>
                 <span
                   ref={(element) => {
                     iconRefs.current[index] = element;
@@ -96,7 +96,7 @@ export default function HomeJewelryCareGuideSection() {
                 }}
                 className="h-0 overflow-hidden"
               >
-                <p className="mt-3 text-sm text-[#d7c6ab]">{item.a}</p>
+                <p className="mt-3 text-sm text-white/72">{item.a}</p>
               </div>
             </button>
           ))}

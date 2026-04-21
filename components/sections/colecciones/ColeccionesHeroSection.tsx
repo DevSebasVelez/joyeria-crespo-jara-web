@@ -22,13 +22,13 @@ export default function ColeccionesHeroSection() {
         className="object-cover opacity-35"
       />
       <div className="relative mx-auto w-[min(92%,1200px)]">
-        <p className="item text-xs tracking-[0.2em] text-[#d7bc91] uppercase">
+        <p className="item text-xs tracking-[0.2em] text-[#d6b98a] uppercase">
           Colecciones
         </p>
-        <h1 className="item mt-4 max-w-4xl text-4xl text-[#f3dfbc] md:text-6xl">
+        <h1 className="item mt-4 max-w-4xl text-4xl text-white md:text-6xl">
           Piezas exclusivas para estilo diario y ocasiones especiales
         </h1>
-        <p className="item mt-6 max-w-2xl text-white/75">
+        <p className="item mt-6 max-w-2xl text-white/78">
           Seleccionamos colecciones con enfoque de diseno, equilibrio visual y
           calidad estructural.
         </p>

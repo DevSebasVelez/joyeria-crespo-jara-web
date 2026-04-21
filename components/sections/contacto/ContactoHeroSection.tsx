@@ -11,10 +11,10 @@ export default function ContactoHeroSection() {
   return (
     <section ref={rootRef} className="bg-[#120e0a] pt-36 pb-20">
       <div className="mx-auto w-[min(92%,1200px)]">
-        <p className="item text-xs tracking-[0.2em] text-[#d7bc91] uppercase">
+        <p className="item text-xs tracking-[0.2em] text-[#d6b98a] uppercase">
           Contacto
         </p>
-        <h1 className="item mt-4 max-w-4xl text-4xl text-[#f3dfbc] md:text-6xl">
+        <h1 className="item mt-4 max-w-4xl text-4xl text-white md:text-6xl">
           Atencion directa, profesional y sin formularios
         </h1>
         <p className="item mt-6 max-w-2xl text-white/75">

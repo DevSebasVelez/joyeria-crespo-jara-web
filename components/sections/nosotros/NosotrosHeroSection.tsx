@@ -46,10 +46,10 @@ export default function NosotrosHeroSection() {
         />
       </div>
       <div className="relative mx-auto w-[min(92%,1200px)]">
-        <p className="hero-item text-xs tracking-[0.2em] text-[#d8be95] uppercase">
+        <p className="hero-item text-xs tracking-[0.2em] text-[#d6b98a] uppercase">
           Nosotros
         </p>
-        <h1 className="hero-item mt-4 max-w-4xl text-4xl text-[#f3dfbc] md:text-6xl">
+        <h1 className="hero-item mt-4 max-w-4xl text-4xl text-white md:text-6xl">
           Tradicion joyera, lujo contemporaneo y confianza
         </h1>
         <p className="hero-item mt-6 max-w-2xl text-white/75">

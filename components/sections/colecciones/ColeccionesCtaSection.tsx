@@ -14,7 +14,7 @@ export default function ColeccionesCtaSection() {
   return (
     <section ref={rootRef} className="bg-[#100c08] py-20">
       <div className="mx-auto flex w-[min(92%,1200px)] flex-wrap items-center justify-between gap-4">
-        <h3 className="text-2xl text-[#f2debc] md:text-4xl">
+        <h3 className="text-2xl text-white md:text-4xl">
           Coordina una visita y prueba tu seleccion favorita
         </h3>
         <div className="flex flex-wrap gap-3">
@@ -28,7 +28,7 @@ export default function ColeccionesCtaSection() {
           </a>
           <Link
             href="/contacto"
-            className="rounded-full border border-[#d8bc8d]/45 px-6 py-3 text-sm tracking-[0.14em] text-[#f2debc] uppercase"
+            className="rounded-full border border-white/35 px-6 py-3 text-sm tracking-[0.14em] text-white/88 uppercase"
           >
             Ver ubicacion
           </Link>

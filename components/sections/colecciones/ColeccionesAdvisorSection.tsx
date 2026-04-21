@@ -107,18 +107,18 @@ export default function ColeccionesAdvisorSection() {
     <section ref={rootRef} className="bg-[#17110c] py-24">
       <div className="mx-auto grid w-[min(92%,1200px)] gap-8 lg:grid-cols-2">
         <article className="advisor-form rounded-4xl border border-[#4b3926] bg-[#21170f] p-8">
-          <p className="text-xs tracking-[0.2em] text-[#d3b587] uppercase">
+          <p className="text-xs tracking-[0.2em] text-[#d6b98a] uppercase">
             Asesor inteligente
           </p>
-          <h2 className="mt-3 text-3xl text-[#f3dfbc] md:text-5xl">
+          <h2 className="mt-3 text-3xl text-white md:text-5xl">
             Encuentra la joya ideal
           </h2>
-          <p className="mt-4 text-[#d7c6ab]">
+          <p className="mt-4 text-white/74">
             Selecciona tu objetivo, rango y estilo. Te devolvemos una
             recomendacion orientativa util para iniciar la asesoria.
           </p>
           <div className="mt-6 grid gap-4">
-            <label className="text-sm text-[#d7c6ab]">
+            <label className="text-sm text-white/78">
               Ocasion
               <select
                 value={purpose}
@@ -128,7 +128,7 @@ export default function ColeccionesAdvisorSection() {
                 }}
                 onFocus={(e) => handleSelectFocus(e.currentTarget)}
                 onBlur={(e) => handleSelectBlur(e.currentTarget)}
-                className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-[#f3dfbc]"
+                className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-white"
               >
                 {OPTIONS.purpose.map((item) => (
                   <option key={item} value={item}>
@@ -137,7 +137,7 @@ export default function ColeccionesAdvisorSection() {
                 ))}
               </select>
             </label>
-            <label className="text-sm text-[#d7c6ab]">
+            <label className="text-sm text-white/78">
               Rango
               <select
                 value={budget}
@@ -147,7 +147,7 @@ export default function ColeccionesAdvisorSection() {
                 }}
                 onFocus={(e) => handleSelectFocus(e.currentTarget)}
                 onBlur={(e) => handleSelectBlur(e.currentTarget)}
-                className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-[#f3dfbc]"
+                className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-white"
               >
                 {OPTIONS.budget.map((item) => (
                   <option key={item} value={item}>
@@ -156,7 +156,7 @@ export default function ColeccionesAdvisorSection() {
                 ))}
               </select>
             </label>
-            <label className="text-sm text-[#d7c6ab]">
+            <label className="text-sm text-white/78">
               Estilo
               <select
                 value={style}
@@ -166,7 +166,7 @@ export default function ColeccionesAdvisorSection() {
                 }}
                 onFocus={(e) => handleSelectFocus(e.currentTarget)}
                 onBlur={(e) => handleSelectBlur(e.currentTarget)}
-                className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-[#f3dfbc]"
+                className="mt-2 w-full rounded-xl border border-[#5a4530] bg-[#150f0a] p-3 text-white"
               >
                 {OPTIONS.style.map((item) => (
                   <option key={item} value={item}>
@@ -187,14 +187,14 @@ export default function ColeccionesAdvisorSection() {
             aria-hidden="true"
             className="pointer-events-none absolute -inset-10 bg-[radial-gradient(circle_at_center,rgba(219,195,154,0.3),transparent_60%)] opacity-0"
           />
-          <p className="text-xs tracking-[0.16em] text-[#d3b587] uppercase">
+          <p className="text-xs tracking-[0.16em] text-[#d6b98a] uppercase">
             Recomendacion inicial
           </p>
-          <h3 className="mt-3 text-3xl text-[#f3dfbc]">{result.title}</h3>
-          <p className="mt-4 text-[#d7c6ab]">
+          <h3 className="mt-3 text-3xl text-white">{result.title}</h3>
+          <p className="mt-4 text-white/78">
             <strong>Material sugerido:</strong> {result.material}
           </p>
-          <p className="mt-3 text-[#d7c6ab]">{result.reason}</p>
+          <p className="mt-3 text-white/74">{result.reason}</p>
           <a
             href="https://wa.me/593986517333"
             target="_blank"

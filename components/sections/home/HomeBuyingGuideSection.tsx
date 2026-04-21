@@ -40,7 +40,7 @@ export default function HomeBuyingGuideSection() {
           <p className="text-xs tracking-[0.2em] text-[#d3b586] uppercase">
             Guia de compra
           </p>
-          <h2 className="mt-3 text-3xl text-[#f3dfbc] md:text-5xl">
+          <h2 className="mt-3 text-3xl text-white md:text-5xl">
             Tres pasos para elegir una joya con criterio profesional
           </h2>
         </div>
@@ -53,8 +53,8 @@ export default function HomeBuyingGuideSection() {
               <p className="text-xs tracking-[0.12em] text-[#d3b586] uppercase">
                 Paso {index + 1}
               </p>
-              <h3 className="mt-3 text-2xl text-[#f3dfbc]">{item.title}</h3>
-              <p className="mt-3 text-[#d7c6ab]">{item.detail}</p>
+              <h3 className="mt-3 text-2xl text-white">{item.title}</h3>
+              <p className="mt-3 text-white/72">{item.detail}</p>
             </article>
           ))}
         </div>

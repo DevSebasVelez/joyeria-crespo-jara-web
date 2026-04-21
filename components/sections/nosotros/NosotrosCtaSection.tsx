@@ -14,7 +14,7 @@ export default function NosotrosCtaSection() {
   return (
     <section ref={rootRef} className="bg-[#100c08] py-20">
       <div className="mx-auto flex w-[min(92%,1200px)] flex-wrap items-center justify-between gap-4">
-        <h3 className="text-2xl text-[#f2debc] md:text-4xl">
+        <h3 className="text-2xl text-white md:text-4xl">
           Conoce nuestras piezas insignia y ediciones especiales
         </h3>
         <Link

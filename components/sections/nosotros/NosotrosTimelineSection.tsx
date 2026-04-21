@@ -36,7 +36,7 @@ export default function NosotrosTimelineSection() {
   return (
     <section ref={rootRef} className="bg-[#1a130d] py-24">
       <div className="mx-auto w-[min(92%,1200px)]">
-        <h2 className="text-3xl text-[#f3dfbc] md:text-5xl">
+        <h2 className="text-3xl text-white md:text-5xl">
           Linea de tiempo institucional
         </h2>
         <div className="mt-10 grid gap-4 md:grid-cols-4">
@@ -45,10 +45,10 @@ export default function NosotrosTimelineSection() {
               key={item.year}
               className="milestone rounded-3xl border border-[#4a3825] bg-[#241a12] p-5"
             >
-              <p className="text-lg tracking-[0.12em] text-[#dcbf92]">
+              <p className="text-lg tracking-[0.12em] text-[#e4c99e]">
                 {item.year}
               </p>
-              <p className="mt-2 text-sm text-[#d4c3a8]">{item.detail}</p>
+              <p className="mt-2 text-sm text-white/72">{item.detail}</p>
             </article>
           ))}
         </div>
