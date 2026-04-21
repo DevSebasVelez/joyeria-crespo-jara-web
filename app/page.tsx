@@ -10,6 +10,7 @@ import HomeSignatureSection from "@/components/sections/home/HomeSignatureSectio
 import type { Metadata } from "next";
 import HomeTestimonialsSection from "@/components/sections/home/HomeTestimonialsSection";
 import HomeBuyingGuideSection from "@/components/sections/home/HomeBuyingGuideSection";
+import HomeAdvisorPromoSection from "@/components/sections/home/HomeAdvisorPromoSection";
 
 export const metadata: Metadata = {
   title: "Joyeria Crespo Jara | Inicio",
@@ -22,6 +23,7 @@ export default function Home() {
     <div className="bg-[#f5f1ea]">
       <SiteNavbar />
       <HeroSection />
+      <HomeAdvisorPromoSection />
       <HomeSignatureSection />
       <HomeLuxuryGridSection />
       <HomeMaterialsInsightsSection />

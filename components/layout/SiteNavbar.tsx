@@ -15,6 +15,8 @@ const NAV_ITEMS = [
   { label: "Contacto", href: "/contacto" },
 ];
 
+const ASESOR_HREF = "/colecciones#asesor-colecciones";
+
 export default function SiteNavbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -197,6 +199,12 @@ export default function SiteNavbar() {
               </Link>
             );
           })}
+          <Link
+            href={ASESOR_HREF}
+            className="rounded-full border border-[#dbc39a]/55 bg-[#dbc39a]/12 px-3 py-1.5 text-[11px] font-semibold tracking-[0.14em] text-[#f4e4c6] uppercase transition-colors hover:bg-[#dbc39a]/22"
+          >
+            Asesor
+          </Link>
         </nav>
 
         <a
@@ -250,6 +258,13 @@ export default function SiteNavbar() {
               {item.label}
             </Link>
           ))}
+          <Link
+            href={ASESOR_HREF}
+            onClick={() => setOpen(false)}
+            className="mobile-nav-item inline-flex w-fit items-center rounded-full border border-[#dbc39a]/45 px-4 py-2 text-xs font-semibold tracking-[0.14em] text-[#f4e4c6] uppercase"
+          >
+            Asesor inteligente
+          </Link>
         </div>
       </div>
     </header>
