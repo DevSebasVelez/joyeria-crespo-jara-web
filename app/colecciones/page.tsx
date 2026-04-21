@@ -8,9 +8,15 @@ import ColeccionesHeroSection from "@/components/sections/colecciones/Coleccione
 import ColeccionesServiceSection from "@/components/sections/colecciones/ColeccionesServiceSection";
 
 export const metadata: Metadata = {
-  title: "Joyeria Crespo Jara | Colecciones",
+  title: "Colecciones",
   description:
-    "Explora colecciones de anillos, collares y pulseras exclusivas en Joyeria Crespo Jara con asesoria personalizada.",
+    "Explora colecciones de anillos, collares y pulseras exclusivas en Joyería Crespo Jara con asesoría personalizada.",
+  openGraph: {
+    url: "/colecciones",
+    description:
+      "Explora colecciones de anillos, collares y pulseras exclusivas con asesoría personalizada.",
+  },
+  alternates: { canonical: "/colecciones" },
 };
 
 export default function ColeccionesPage() {

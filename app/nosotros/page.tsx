@@ -8,9 +8,15 @@ import NosotrosTimelineSection from "@/components/sections/nosotros/NosotrosTime
 import NosotrosValuesGallerySection from "@/components/sections/nosotros/NosotrosValuesGallerySection";
 
 export const metadata: Metadata = {
-  title: "Joyeria Crespo Jara | Nosotros",
+  title: "Nosotros",
   description:
-    "Conoce la historia, mision, vision y valores de Joyeria Crespo Jara, marca de alta joyeria fundada en 2001.",
+    "Conoce la historia, misión, visión y valores de Joyería Crespo Jara, marca de alta joyería fundada en 2001.",
+  openGraph: {
+    url: "/nosotros",
+    description:
+      "Historia, misión, visión y valores de una marca de alta joyería fundada en 2001.",
+  },
+  alternates: { canonical: "/nosotros" },
 };
 
 export default function NosotrosPage() {

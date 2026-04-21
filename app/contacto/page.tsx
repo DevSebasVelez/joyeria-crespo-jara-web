@@ -8,9 +8,15 @@ import ContactoMapSection from "@/components/sections/contacto/ContactoMapSectio
 import ContactoVisitSection from "@/components/sections/contacto/ContactoVisitSection";
 
 export const metadata: Metadata = {
-  title: "Joyeria Crespo Jara | Contacto",
+  title: "Contacto",
   description:
-    "Contacta a Joyeria Crespo Jara por WhatsApp, Instagram o Facebook. Revisa horarios y ubicacion en mapa.",
+    "Contacta a Joyería Crespo Jara por WhatsApp, Instagram o Facebook. Revisa horarios y ubicación en mapa.",
+  openGraph: {
+    url: "/contacto",
+    description:
+      "Contacta por WhatsApp, Instagram o Facebook. Horarios y ubicación en mapa.",
+  },
+  alternates: { canonical: "/contacto" },
 };
 
 export default function ContactoPage() {

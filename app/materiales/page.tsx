@@ -8,9 +8,15 @@ import MaterialesProcessSection from "@/components/sections/materiales/Materiale
 import MaterialesSpecsSection from "@/components/sections/materiales/MaterialesSpecsSection";
 
 export const metadata: Metadata = {
-  title: "Joyeria Crespo Jara | Materiales",
+  title: "Materiales",
   description:
-    "Conoce los materiales premium de Joyeria Crespo Jara: oro 750, plata 9.25 y acero inoxidable 3.16 con garantia de calidad.",
+    "Conoce los materiales premium de Joyería Crespo Jara: oro 750, plata 9.25 y acero inoxidable 316 con garantía de calidad.",
+  openGraph: {
+    url: "/materiales",
+    description:
+      "Oro 750, plata 9.25 y acero inoxidable 316: materiales premium con garantía de calidad.",
+  },
+  alternates: { canonical: "/materiales" },
 };
 
 export default function MaterialesPage() {

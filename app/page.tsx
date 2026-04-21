@@ -13,9 +13,15 @@ import HomeBuyingGuideSection from "@/components/sections/home/HomeBuyingGuideSe
 import HomeAdvisorPromoSection from "@/components/sections/home/HomeAdvisorPromoSection";
 
 export const metadata: Metadata = {
-  title: "Joyeria Crespo Jara | Inicio",
+  title: "Inicio",
   description:
-    "Alta joyeria con diseno exclusivo, colecciones premium y asesoria personalizada en Joyeria Crespo Jara.",
+    "Alta joyería con diseño exclusivo, colecciones premium y asesoría personalizada en Joyería Crespo Jara.",
+  openGraph: {
+    url: "/",
+    description:
+      "Alta joyería con diseño exclusivo, colecciones premium y asesoría personalizada en Joyería Crespo Jara.",
+  },
+  alternates: { canonical: "/" },
 };
 
 export default function Home() {
