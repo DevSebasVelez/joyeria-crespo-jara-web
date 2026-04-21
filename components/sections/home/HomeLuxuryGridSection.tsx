@@ -1,15 +1,27 @@
 "use client";
 
-import Image from "next/image";
 import { useRef } from "react";
+import JewelryMosaicGallery, {
+  type JewelryGalleryItem,
+} from "@/components/gallery/JewelryMosaicGallery";
 import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
-const IMAGES = [
-  "/images/gallery/DSC09462.jpg",
-  "/images/gallery/DSC09501.jpg",
-  "/images/gallery/DSC09477.jpg",
-  "/images/gallery/DSC09533.jpg",
-  "/images/gallery/DSC09484.jpg",
+const ITEMS: JewelryGalleryItem[] = [
+  {
+    src: "/images/gallery/DSC09462.jpg",
+    alt: "Selección destacada — oro y piedras",
+  },
+  { src: "/images/gallery/DSC09501.jpg", alt: "Detalle de acabado artesanal" },
+  { src: "/images/gallery/DSC09477.jpg", alt: "Pieza en vitrina, luz cálida" },
+  {
+    src: "/images/gallery/DSC09533.jpg",
+    alt: "Arete con diseño contemporáneo",
+  },
+  { src: "/images/gallery/DSC09484.jpg", alt: "Joyería fina Crespo Jara" },
+  {
+    src: "/images/gallery/DSC09466.jpg",
+    alt: "Anillo con diseño contemporáneo",
+  },
 ];
 
 export default function HomeLuxuryGridSection() {
@@ -26,23 +38,7 @@ export default function HomeLuxuryGridSection() {
         <h2 className="mb-10 text-3xl text-[#f1dfbf] md:text-5xl">
           Selecciones destacadas de la semana
         </h2>
-        <div className="grid auto-rows-[220px] gap-4 md:grid-cols-3">
-          {IMAGES.map((src, index) => (
-            <article
-              key={src}
-              className={`item group relative overflow-hidden rounded-3xl border border-[#3f3122] ${
-                index === 0 || index === 3 ? "md:col-span-2" : ""
-              }`}
-            >
-              <Image
-                src={src}
-                alt="Pieza destacada Joyeria Crespo Jara"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </article>
-          ))}
-        </div>
+        <JewelryMosaicGallery items={ITEMS} theme="dark" />
       </div>
     </section>
   );
