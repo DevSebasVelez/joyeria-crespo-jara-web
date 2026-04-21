@@ -19,8 +19,8 @@ export default function NosotrosPage() {
       <SiteNavbar />
       <NosotrosHeroSection />
       <NosotrosMissionVisionSection />
-      <NosotrosValuesGallerySection />
       <NosotrosTimelineSection />
+      <NosotrosValuesGallerySection />
       <NosotrosCtaSection />
       <SiteFooter />
     </div>

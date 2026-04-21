@@ -17,7 +17,7 @@ export default function HomeAtelierSection() {
   );
 
   return (
-    <section ref={rootRef} className="bg-[#f2ebe0] py-24">
+    <section ref={rootRef} className="bg-[#eadcc8] py-24">
       <div className="mx-auto grid w-[min(92%,1200px)] gap-8 lg:grid-cols-2">
         <article className="copy rounded-4xl border border-[#d6bfa0] bg-white p-8">
           <p className="text-xs tracking-[0.2em] text-[#8b6f4d] uppercase">

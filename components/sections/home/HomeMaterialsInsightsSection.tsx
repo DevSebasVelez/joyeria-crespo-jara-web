@@ -33,7 +33,7 @@ export default function HomeMaterialsInsightsSection() {
   );
 
   return (
-    <section ref={rootRef} className="bg-[#fff9f0] py-24">
+    <section ref={rootRef} className="bg-[#f3e8d8] py-24">
       <div className="mx-auto w-[min(92%,1200px)]">
         <div className="head mb-10 max-w-3xl">
           <p className="text-xs tracking-[0.2em] text-[#8a6f4c] uppercase">

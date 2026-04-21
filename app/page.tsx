@@ -23,12 +23,12 @@ export default function Home() {
       <SiteNavbar />
       <HeroSection />
       <HomeSignatureSection />
-      <HomeMaterialsInsightsSection />
       <HomeLuxuryGridSection />
-      <HomeTestimonialsSection />
-      <HomeAtelierSection />
+      <HomeMaterialsInsightsSection />
       <HomeJewelryCareGuideSection />
+      <HomeTestimonialsSection />
       <HomeBuyingGuideSection />
+      <HomeAtelierSection />
       <HomeFinalCtaSection />
       <SiteFooter />
     </div>

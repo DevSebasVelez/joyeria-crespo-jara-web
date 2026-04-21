@@ -12,14 +12,14 @@ export default function NosotrosCtaSection() {
     { start: "top 84%" },
   );
   return (
-    <section ref={rootRef} className="bg-[#f4ede3] py-20">
+    <section ref={rootRef} className="bg-[#100c08] py-20">
       <div className="mx-auto flex w-[min(92%,1200px)] flex-wrap items-center justify-between gap-4">
-        <h3 className="text-2xl text-[#2f2419] md:text-4xl">
+        <h3 className="text-2xl text-[#f2debc] md:text-4xl">
           Conoce nuestras piezas insignia y ediciones especiales
         </h3>
         <Link
           href="/colecciones"
-          className="rounded-full bg-[#2a2016] px-6 py-3 text-sm tracking-[0.14em] text-[#f0ddbc] uppercase"
+          className="rounded-full bg-[#dbc39a] px-6 py-3 text-sm font-semibold tracking-[0.14em] text-[#332717] uppercase"
         >
           Ir a colecciones
         </Link>

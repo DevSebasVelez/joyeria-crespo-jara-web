@@ -19,8 +19,8 @@ export default function ContactoPage() {
       <SiteNavbar />
       <ContactoHeroSection />
       <ContactoChannelsSection />
-      <ContactoMapSection />
       <ContactoVisitSection />
+      <ContactoMapSection />
       <ContactoCtaSection />
       <SiteFooter />
     </div>
