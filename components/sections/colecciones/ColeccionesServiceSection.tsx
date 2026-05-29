@@ -22,12 +22,12 @@ export default function ColeccionesServiceSection() {
       <div className="mx-auto grid w-[min(92%,1200px)] gap-4 md:grid-cols-3">
         {[
           {
-            title: "Curaduria por perfil",
-            copy: "Sugerimos piezas segun ocasion, estilo personal y presupuesto.",
+            title: "Curaduría por perfil",
+            copy: "Sugerimos piezas según ocasión, estilo personal y presupuesto.",
           },
           {
             title: "Reserva y seguimiento",
-            copy: "Aseguramos disponibilidad y acompanamos la decision sin presion.",
+            copy: "Aseguramos disponibilidad y acompañamos la decisión sin presión.",
           },
           {
             title: "Entrega con recomendaciones",

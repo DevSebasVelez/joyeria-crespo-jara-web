@@ -1,6 +1,6 @@
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_HREF = "https://wa.me/593986517333";
+const WHATSAPP_HREF = "https://wa.me/593981504294";
 
 export default function WhatsAppFloatingButton() {
   return (

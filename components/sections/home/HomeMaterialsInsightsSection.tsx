@@ -6,17 +6,18 @@ import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 const INSIGHTS = [
   {
     material: "Oro 750",
-    ideal: "Piezas de alto valor y uso ocasional premium",
-    expertTip: "Mantener separado de otras joyas para evitar micro rayaduras.",
+    ideal: "Piezas de alto valor que duran toda la vida",
+    expertTip:
+      "Evitar químicos y humedades constantes para una mejor conservación.",
   },
   {
     material: "Plata 9.25",
-    ideal: "Uso frecuente con estilo clasico o contemporaneo",
-    expertTip: "Limpiar con pano suave despues de contacto con humedad.",
+    ideal: "Uso frecuente con estilo clásico o contemporáneo",
+    expertTip: "Limpiar con paño suave después de contacto con humedad.",
   },
   {
     material: "Acero 3.16",
-    ideal: "Uso diario, alta resistencia y minimo mantenimiento",
+    ideal: "Uso diario, alta resistencia y mínimo mantenimiento",
     expertTip: "Perfecto para clientes que priorizan durabilidad continua.",
   },
 ];
@@ -40,10 +41,10 @@ export default function HomeMaterialsInsightsSection() {
             Criterio profesional
           </p>
           <h2 className="mt-3 text-3xl text-[#241c14] md:text-5xl">
-            Como elegir material segun uso real
+            Cómo elegir material según uso real
           </h2>
           <p className="mt-4 text-[#5f4f3d]">
-            Esta referencia ayuda a entender cuando conviene priorizar
+            Esta referencia ayuda a entender cuándo conviene priorizar
             presencia, versatilidad o resistencia.
           </p>
         </div>

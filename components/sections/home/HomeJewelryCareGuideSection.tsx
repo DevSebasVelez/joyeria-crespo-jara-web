@@ -7,16 +7,16 @@ import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const GUIDE = [
   {
-    q: "Como conservar el brillo en joyas de lujo",
-    a: "Guarda cada pieza por separado en estuche textil y evita friccion directa con otras superficies metalicas.",
+    q: "Cómo conservar el brillo en joyas de lujo",
+    a: "Guarda cada pieza por separado en estuche textil y evita fricción directa con otras superficies metálicas.",
   },
   {
-    q: "Que evitar en el uso diario",
-    a: "Perfumes, cloro, cremas abrasivas y golpes repetitivos reducen vida util de acabados y monturas.",
+    q: "Qué evitar en el uso diario",
+    a: "Perfumes, cloro, cremas abrasivas y golpes repetitivos reducen la vida útil de acabados y monturas.",
   },
   {
-    q: "Cada cuanto hacer mantenimiento",
-    a: "Para uso frecuente, una revision preventiva trimestral ayuda a preservar cierre, estructura y acabado.",
+    q: "Cada cuánto hacer mantenimiento",
+    a: "Para uso frecuente, una revisión preventiva trimestral ayuda a preservar cierre, estructura y acabado.",
   },
 ];
 
@@ -60,14 +60,14 @@ export default function HomeJewelryCareGuideSection() {
       <div className="mx-auto grid w-[min(92%,1200px)] gap-8 lg:grid-cols-2">
         <div className="head">
           <p className="text-xs tracking-[0.2em] text-[#d6b98a] uppercase">
-            Guia de cuidado
+            Guía de cuidado
           </p>
           <h2 className="mt-3 text-3xl text-white md:text-5xl">
             Recomendaciones para preservar tus joyas
           </h2>
           <p className="mt-4 text-white/74">
-            Un cliente informado valora mejor su inversion. Esta guia resume
-            practicas clave de conservacion profesional.
+            Un cliente informado valora mejor su inversión. Esta guía resume
+            prácticas clave de conservación profesional.
           </p>
         </div>
         <div className="space-y-3">

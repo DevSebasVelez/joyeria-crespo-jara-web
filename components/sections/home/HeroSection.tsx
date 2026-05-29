@@ -18,10 +18,10 @@ const HEADLINES_DESKTOP = [
 ];
 
 const HERO_COPY_DESKTOP =
-  "Ofrecemos joyas de alta calidad que reflejan elegancia, estilo y significado, con materiales finos, diseno exclusivo y un servicio personalizado para momentos realmente especiales. Nuestro compromiso: una joya para toda la vida.";
+  "Ofrecemos joyas de alta calidad que reflejan elegancia, estilo y significado, con materiales finos, diseño exclusivo y un servicio personalizado para momentos realmente especiales. Nuestro compromiso: una joya para toda la vida.";
 
 const HERO_COPY_MOBILE =
-  "Alta joyeria en Chordeleg. Asesoria personalizada y piezas seleccionadas con criterio.";
+  "Alta joyería en Chordeleg. Asesoría personalizada y piezas seleccionadas con criterio.";
 
 const STATS = [
   { value: "Chordeleg", label: "Tienda y atelier" },
@@ -120,9 +120,9 @@ export default function HeroSection() {
                 aria-hidden
               />
               <span className="text-[10px] tracking-[0.16em] text-[#f0d9b5] uppercase md:text-[11px] md:tracking-[0.2em]">
-                <span className="md:hidden">Alta joyeria · Chordeleg</span>
+                <span className="md:hidden">Alta joyería · Chordeleg</span>
                 <span className="hidden md:inline">
-                  Alta joyeria ecuatoriana
+                  Alta joyería ecuatoriana
                 </span>
               </span>
             </div>
@@ -159,7 +159,7 @@ export default function HeroSection() {
                     {SLOGAN}
                   </p>
                   <p className="text-[0.9rem] leading-snug text-white/68">
-                    Joyeria de autor en Chordeleg.
+                    Joyería de autor en Chordeleg.
                   </p>
                 </div>
               </span>
@@ -176,12 +176,12 @@ export default function HeroSection() {
 
             <div className="mt-7 flex w-full flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <a
-                href="https://wa.me/593986517333"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta inline-flex w-full items-center justify-center rounded-full bg-[#dbc39a] px-6 py-3.5 text-sm font-semibold tracking-[0.12em] text-[#322617] uppercase transition-all duration-200 hover:bg-[#ecd8b5] sm:w-auto sm:px-7"
-              >
-                Agendar asesoria
+              href="https://wa.me/593981504294"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-cta inline-flex w-full items-center justify-center rounded-full bg-[#dbc39a] px-6 py-3.5 text-sm font-semibold tracking-[0.12em] text-[#322617] uppercase transition-all duration-200 hover:bg-[#ecd8b5] sm:w-auto sm:px-7"
+            >
+              Agendar asesoría
               </a>
               <a
                 href="https://www.instagram.com/joyeriacrespojara/"

@@ -10,27 +10,27 @@ export default function SiteFooter() {
           <div className="flex items-center gap-3">
             <Image
               src="/images/logos/logo-white.png"
-              alt="Joyeria Crespo Jara"
+              alt="Joyería Crespo Jara"
               width={42}
               height={42}
               className="h-10 w-10 object-contain"
             />
             <div>
               <p className="text-xs tracking-[0.2em] text-[#dac39d] uppercase">
-                Joyeria Crespo Jara
+                Joyería Crespo Jara
               </p>
               <p className="text-[11px] text-white/55">Fundada en 2001</p>
             </div>
           </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/62">
-            Piezas exclusivas que combinan tradicion, lujo y diseno
-            contemporaneo para cada momento inolvidable.
+            Piezas exclusivas que combinan tradición, lujo y diseño
+            contemporáneo para cada momento inolvidable.
           </p>
         </div>
 
         <div>
           <h3 className="text-sm tracking-[0.14em] text-[#d9bc8e] uppercase">
-            Navegacion
+            Navegación
           </h3>
           <div className="mt-4 flex flex-col gap-2 text-sm text-white/72">
             <Link href="/">Inicio</Link>
@@ -47,7 +47,13 @@ export default function SiteFooter() {
           </h3>
           <p className="mt-4 text-sm text-white/75">Martes a Domingo</p>
           <p className="text-sm text-white/75">9:00 am - 6:00 pm</p>
-          <p className="text-sm text-white/75">098 651 7333</p>
+          <p className="mt-2 text-sm text-white/75">
+            <span className="text-[#d9bc8e]">Local Principal:</span> 098 150
+            4294
+          </p>
+          <p className="text-sm text-white/75">
+            <span className="text-[#d9bc8e]">Sucursal:</span> 098 651 7333
+          </p>
           <div className="mt-4 flex gap-3">
             <a
               href="https://www.facebook.com/profile.php?id=61576690946838"
@@ -68,11 +74,11 @@ export default function SiteFooter() {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/593986517333"
+              href="https://wa.me/593981504294"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/85"
-              aria-label="WhatsApp"
+              aria-label="WhatsApp Local Principal"
             >
               <FaWhatsapp />
             </a>
@@ -80,7 +86,7 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className="mx-auto mt-12 w-[min(92%,1200px)] border-t border-white/10 pt-4 text-xs text-white/45">
-        © {new Date().getFullYear()} Joyeria Crespo Jara. Todos los derechos
+        © {new Date().getFullYear()} Joyería Crespo Jara. Todos los derechos
         reservados.
       </div>
     </footer>

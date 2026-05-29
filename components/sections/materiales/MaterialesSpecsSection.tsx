@@ -7,17 +7,17 @@ const SPECS = [
   {
     title: "Oro 750",
     detail:
-      "Aleacion premium para piezas de lujo, brillo estable y alto valor percibido.",
+      "Aleación premium para piezas de lujo, brillo estable y alto valor percibido.",
   },
   {
     title: "Plata 9.25",
     detail:
-      "Acabado elegante y versatil para estilos clasicos y contemporaneos.",
+      "Acabado elegante y versátil para estilos clásicos y contemporáneos.",
   },
   {
     title: "Acero 3.16",
     detail:
-      "Resistencia superior, ideal para uso frecuente con minima deformacion.",
+      "Resistencia superior, ideal para uso frecuente con mínima deformación.",
   },
 ];
 

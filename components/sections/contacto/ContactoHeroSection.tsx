@@ -15,11 +15,11 @@ export default function ContactoHeroSection() {
           Contacto
         </p>
         <h1 className="item mt-4 max-w-4xl text-4xl text-white md:text-6xl">
-          Atencion directa, profesional y sin formularios
+          Atención directa, profesional y sin formularios
         </h1>
         <p className="item mt-6 max-w-2xl text-white/75">
           Te atendemos por WhatsApp, Instagram o Facebook y coordinamos tu
-          visita con asesoria personalizada.
+          visita con asesoría personalizada.
         </p>
       </div>
     </section>

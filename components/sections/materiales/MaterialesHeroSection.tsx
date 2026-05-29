@@ -16,7 +16,7 @@ export default function MaterialesHeroSection() {
     >
       <Image
         src="/images/gallery/DSC09530.jpg"
-        alt="Materiales de alta joyeria"
+        alt="Materiales de alta joyería"
         fill
         className="object-cover opacity-35"
       />
@@ -25,7 +25,7 @@ export default function MaterialesHeroSection() {
           Materiales y calidad
         </p>
         <h1 className="hero-item mt-4 max-w-4xl text-4xl text-white md:text-6xl">
-          La calidad se define en el detalle tecnico
+          La calidad se define en el detalle técnico
         </h1>
         <p className="hero-item mt-6 max-w-2xl text-white/75">
           Oro 750, plata 9.25 y acero inoxidable 3.16 con protocolos de control

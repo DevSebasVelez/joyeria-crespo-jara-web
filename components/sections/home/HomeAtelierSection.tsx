@@ -28,7 +28,7 @@ export default function HomeAtelierSection() {
           </h2>
           <p className="mt-4 text-[#5f4f3e]">
             Trabajamos con oro 750, plata 9.25 y acero inoxidable 3.16 bajo
-            estandares de control para lograr piezas durables, refinadas y
+            estándares de control para lograr piezas durables, refinadas y
             equilibradas.
           </p>
           <Link

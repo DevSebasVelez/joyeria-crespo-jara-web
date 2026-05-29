@@ -20,10 +20,10 @@ export default function HomeAdvisorPromoSection() {
               </span>
             </div>
             <h2 className="mt-4 text-2xl text-[#241c14] md:text-3xl">
-              Arma tu briefing y envialo por WhatsApp
+              Arma tu briefing y envíalo por WhatsApp
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#5f4f3d] md:text-base">
-              Selecciona ocasion, estilo, material y urgencia. Un asesor te
+              Selecciona ocasión, estilo, material y urgencia. Un asesor te
               responde con opciones reales alineadas a lo que buscas.
             </p>
             <p className="mt-5 text-[11px] font-medium tracking-[0.22em] text-[#8a6f4c] uppercase">

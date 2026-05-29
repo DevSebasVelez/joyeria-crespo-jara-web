@@ -19,10 +19,10 @@ export default function MaterialesProcessSection() {
             Control de calidad en 4 etapas
           </h2>
           <ol className="mt-6 space-y-3 text-white/72">
-            <li>1. Verificacion de material y estructura.</li>
-            <li>2. Revision de terminaciones y simetria.</li>
-            <li>3. Prueba de resistencia segun tipo de pieza.</li>
-            <li>4. Validacion final de brillo y presentacion.</li>
+            <li>1. Verificación de material y estructura.</li>
+            <li>2. Revisión de terminaciones y simetría.</li>
+            <li>3. Prueba de resistencia según tipo de pieza.</li>
+            <li>4. Validación final de brillo y presentación.</li>
           </ol>
         </article>
         <article className="item relative min-h-[360px] overflow-hidden rounded-4xl border border-[#463522]">

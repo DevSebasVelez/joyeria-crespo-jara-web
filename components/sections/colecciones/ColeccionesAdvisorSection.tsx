@@ -36,7 +36,7 @@ const LABELS = {
     premium: "Premium",
   } satisfies Record<Budget, string>,
   style: {
-    clasico: "Clasico",
+    clasico: "Clásico",
     moderno: "Moderno",
     minimalista: "Minimalista",
   } satisfies Record<Style, string>,
@@ -67,7 +67,7 @@ export default function ColeccionesAdvisorSection() {
 
   const summaryItems = useMemo(
     () => [
-      { label: "Ocasion", value: LABELS.purpose[purpose] },
+          { label: "Ocasión", value: LABELS.purpose[purpose] },
       { label: "Rango", value: LABELS.budget[budget] },
       { label: "Estilo", value: LABELS.style[style] },
       {
@@ -81,7 +81,7 @@ export default function ColeccionesAdvisorSection() {
 
   const whatsappMessage = useMemo(() => {
     const lines = [
-      "Hola, quisiera una asesoria personalizada!",
+      "Hola, quisiera una asesoría personalizada.",
       "",
       "Estoy buscando una joya para:",
       `- Ocasion: ${LABELS.purpose[purpose]}`,
@@ -90,12 +90,12 @@ export default function ColeccionesAdvisorSection() {
       `- Material preferido: ${LABELS.materialPreference[materialPreference]}`,
       `- Urgencia: ${LABELS.urgency[urgency]}`,
       "",
-      "Me gustaria recibir opciones recomendadas segun estos criterios.",
+      "Me gustaría recibir opciones recomendadas según estos criterios.",
     ];
     return lines.join("\n");
   }, [purpose, budget, style, materialPreference, urgency]);
 
-  const whatsappHref = `https://wa.me/593986517333?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappHref = `https://wa.me/593981504294?text=${encodeURIComponent(whatsappMessage)}`;
 
   useScrollStairReveal(
     rootRef,
@@ -169,12 +169,12 @@ export default function ColeccionesAdvisorSection() {
             Encuentra la joya ideal
           </h2>
           <p className="mt-4 text-white/74">
-            Selecciona tus criterios y envia un briefing listo por WhatsApp para
+            Selecciona tus criterios y envía un briefing listo por WhatsApp para
             que un asesor te atienda con opciones exactas.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <label className="text-sm text-white/78">
-              Ocasion
+              Ocasión
               <div className="relative mt-2">
                 <select
                   value={purpose}
@@ -326,10 +326,10 @@ export default function ColeccionesAdvisorSection() {
             Resumen para asesoria
           </p>
           <h3 className="mt-3 text-3xl text-white">
-            Tu seleccion lista para WhatsApp
+            Tu selección lista para WhatsApp
           </h3>
           <p className="mt-3 text-white/74">
-            Envia estos parametros y un asesor te respondera con opciones
+            Envía estos parámetros y un asesor te responderá con opciones
             alineadas a tu estilo, presupuesto y urgencia.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">

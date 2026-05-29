@@ -6,19 +6,19 @@ import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const STEPS = [
   {
-    title: "Define la ocasion",
+    title: "Define la ocasión",
     detail:
       "Regalo, uso diario o evento formal para ajustar estilo y protagonismo.",
   },
   {
-    title: "Elige material correcto",
+    title: "Elige el material correcto",
     detail:
       "Oro 750 para lujo premium, plata 9.25 para versatilidad, acero 3.16 para uso continuo.",
   },
   {
-    title: "Confirma asesoramiento",
+    title: "Confirma el asesoramiento",
     detail:
-      "Una asesoria guiada reduce errores de compra y mejora satisfaccion final.",
+      "Una asesoría guiada reduce errores de compra y mejora la satisfacción final.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function HomeBuyingGuideSection() {
       <div className="mx-auto w-[min(92%,1200px)]">
         <div className="head mb-10 max-w-3xl">
           <p className="text-xs tracking-[0.2em] text-[#d3b586] uppercase">
-            Guia de compra
+            Guía de compra
           </p>
           <h2 className="mt-3 text-3xl text-white md:text-5xl">
             Tres pasos para elegir una joya con criterio profesional
@@ -63,7 +63,7 @@ export default function HomeBuyingGuideSection() {
             href="/colecciones"
             className="inline-flex rounded-full bg-[#dbc39a] px-6 py-3 text-sm font-semibold tracking-[0.14em] text-[#332717] uppercase"
           >
-            Aplicar esta guia en colecciones
+            Aplicar esta guía en colecciones
           </Link>
         </div>
       </div>

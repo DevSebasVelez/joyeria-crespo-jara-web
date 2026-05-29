@@ -29,7 +29,7 @@ export default function ColeccionesHeroSection() {
           Piezas exclusivas para estilo diario y ocasiones especiales
         </h1>
         <p className="item mt-6 max-w-2xl text-white/78">
-          Seleccionamos colecciones con enfoque de diseno, equilibrio visual y
+          Seleccionamos colecciones con enfoque de diseño, equilibrio visual y
           calidad estructural.
         </p>
       </div>

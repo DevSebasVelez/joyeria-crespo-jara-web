@@ -167,17 +167,17 @@ export default function SiteNavbar() {
         >
           <Image
             src="/images/logos/logo-white.png"
-            alt="Joyeria Crespo Jara"
+            alt="Joyería Crespo Jara"
             width={38}
             height={38}
             className="h-9 w-9 object-contain"
           />
           <div className="hidden sm:block">
             <p className="font-medium tracking-[0.2em] text-[#dbc39a] uppercase">
-              Joyeria Crespo Jara
+              Joyería Crespo Jara
             </p>
             <p className="text-[10px] tracking-[0.26em] text-white/55 uppercase">
-              Alta joyeria
+              Alta joyería
             </p>
           </div>
         </Link>
@@ -208,17 +208,17 @@ export default function SiteNavbar() {
         </nav>
 
         <a
-          href="https://wa.me/593986517333"
+          href="https://wa.me/593981504294"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden rounded-full border border-[#dbc39a]/40 px-4 py-2 text-[11px] font-semibold tracking-[0.16em] text-[#f4e4c6] uppercase transition-colors hover:bg-[#dbc39a]/15 md:inline-flex"
         >
-          Agenda asesoria
+          Agenda asesoría
         </a>
 
         <button
           type="button"
-          aria-label={open ? "Cerrar menu" : "Abrir menu"}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
           onClick={() => setOpen((state) => !state)}
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white lg:hidden"

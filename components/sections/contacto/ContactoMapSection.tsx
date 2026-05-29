@@ -17,7 +17,7 @@ export default function ContactoMapSection() {
     <section ref={rootRef} className="bg-[#fffaf3] py-24">
       <div className="mx-auto w-[min(92%,1200px)]">
         <h2 className="head text-3xl text-[#241c14] md:text-5xl">
-          Ubicacion y referencia
+          Ubicación y referencia
         </h2>
         <div className="map mt-8 overflow-hidden rounded-4xl border border-[#d8c3a0] bg-white p-3">
           <iframe
@@ -29,7 +29,7 @@ export default function ContactoMapSection() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="h-[420px] w-full rounded-2xl"
-            title="Mapa Joyeria Crespo Jara"
+            title="Mapa Joyería Crespo Jara"
           />
         </div>
       </div>

@@ -50,10 +50,10 @@ export default function NosotrosHeroSection() {
           Nosotros
         </p>
         <h1 className="hero-item mt-4 max-w-4xl text-4xl text-white md:text-6xl">
-          Tradicion joyera, lujo contemporaneo y confianza
+          Tradición joyera, lujo contemporáneo y confianza
         </h1>
         <p className="hero-item mt-6 max-w-2xl text-white/75">
-          Desde 2001 construimos una marca basada en excelencia tecnica y
+          Desde 2001 construimos una marca basada en excelencia técnica y
           asesoramiento personalizado.
         </p>
       </div>

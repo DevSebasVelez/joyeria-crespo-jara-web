@@ -6,7 +6,13 @@ import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const CHANNELS = [
   {
-    title: "WhatsApp",
+    title: "WhatsApp · Local Principal",
+    detail: "098 150 4294",
+    href: "https://wa.me/593981504294",
+    icon: FaWhatsapp,
+  },
+  {
+    title: "WhatsApp · Sucursal",
     detail: "098 651 7333",
     href: "https://wa.me/593986517333",
     icon: FaWhatsapp,
@@ -19,7 +25,7 @@ const CHANNELS = [
   },
   {
     title: "Facebook",
-    detail: "Joyeria Crespo Jara",
+    detail: "Joyería Crespo Jara",
     href: "https://www.facebook.com/profile.php?id=61576690946838",
     icon: FaFacebookF,
   },
@@ -41,7 +47,7 @@ export default function ContactoChannelsSection() {
   );
   return (
     <section ref={rootRef} className="bg-[#f8f1e8] py-24">
-      <div className="mx-auto grid w-[min(92%,1200px)] gap-4 md:grid-cols-3">
+      <div className="mx-auto grid w-[min(92%,1200px)] gap-4 sm:grid-cols-2 md:grid-cols-4">
         {CHANNELS.map((item) => (
           <a
             key={item.title}

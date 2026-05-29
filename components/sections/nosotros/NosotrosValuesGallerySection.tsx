@@ -8,7 +8,7 @@ import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 const VALUES = [
   { title: "Excelencia", icon: FaAward },
   { title: "Exclusividad", icon: FaCrown },
-  { title: "Artesania", icon: FaGem },
+  { title: "Artesanía", icon: FaGem },
   { title: "Confianza", icon: FaHandshake },
 ];
 

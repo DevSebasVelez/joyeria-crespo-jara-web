@@ -6,18 +6,18 @@ import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 
 const PILLARS = [
   {
-    title: "Curaduria exclusiva",
-    copy: "Cada pieza se selecciona por diseno, equilibrio y valor estetico real.",
+    title: "Curaduría exclusiva",
+    copy: "Cada pieza se selecciona por diseño, equilibrio y valor estético real.",
     icon: FaGem,
   },
   {
-    title: "Atencion personalizada",
-    copy: "Acompanamos cada compra con asesoria humana y criterio profesional.",
+    title: "Atención personalizada",
+    copy: "Acompañamos cada compra con asesoría humana y criterio profesional.",
     icon: FaUserTie,
   },
   {
     title: "Experiencia premium",
-    copy: "Procesos claros, respuesta rapida y seguimiento posterior a la entrega.",
+    copy: "Procesos claros, respuesta rápida y seguimiento posterior a la entrega.",
     icon: FaRegClock,
   },
 ];
@@ -41,11 +41,11 @@ export default function HomeSignatureSection() {
             Nuestra firma
           </p>
           <h2 className="mt-3 text-3xl text-[#241c14] md:text-5xl">
-            Alta joyeria con criterio, no con volumen
+            Alta joyería con criterio, no con volumen
           </h2>
           <p className="mt-4 text-[#5f4f3d]">
-            Disenamos una experiencia elegante donde cada decision tiene
-            sentido: material, proporciones, estilo y ocasion.
+            Diseñamos una experiencia elegante donde cada decisión tiene
+            sentido: material, proporciones, estilo y ocasión.
           </p>
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-3">

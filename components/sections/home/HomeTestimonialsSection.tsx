@@ -6,19 +6,19 @@ import { useScrollStairReveal } from "@/lib/animations/useScrollStairReveal";
 const TESTIMONIALS = [
   {
     quote:
-      "Excelente asesoria. Me ayudaron a elegir una pieza elegante y duradera para un aniversario importante.",
+      "Excelente asesoría. Me ayudaron a elegir una pieza elegante y duradera para un aniversario importante.",
     author: "Cliente verificado",
     channel: "WhatsApp",
   },
   {
     quote:
-      "La diferencia se nota en el acabado. Se siente una joyeria con criterio profesional y buen gusto.",
+      "La diferencia se nota en el acabado. Se siente una joyería con criterio profesional y buen gusto.",
     author: "Cliente recurrente",
     channel: "Instagram",
   },
   {
     quote:
-      "Atencion impecable y recomendaciones claras sobre materiales. Experiencia premium de inicio a fin.",
+      "Atención impecable y recomendaciones claras sobre materiales. Experiencia premium de inicio a fin.",
     author: "Cliente en tienda",
     channel: "Visita presencial",
   },

@@ -15,7 +15,7 @@ export default function HomeFinalCtaSection() {
     <section ref={rootRef} className="bg-[#0f0b08] py-20">
       <div className="mx-auto flex w-[min(92%,1200px)] flex-wrap items-center justify-between gap-4">
         <h2 className="text-2xl text-[#f3dfbd] md:text-4xl">
-          Agenda una asesoria y encuentra la joya ideal
+          Agenda una asesoría y encuentra la joya ideal
         </h2>
         <div className="flex flex-wrap gap-3">
           <Link
