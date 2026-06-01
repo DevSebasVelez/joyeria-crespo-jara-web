@@ -8,7 +8,7 @@ const LOCATIONS = [
     label: "Local Principal",
     address: "Carlos Serrano 6-40 y 23 de enero · Chordeleg, Ecuador",
     mapSrc:
-      "https://maps.google.com/maps?q=-2.9224516559367264,-78.77657501976198&z=18&output=embed",
+      "https://maps.google.com/maps?q=-2.92207945628388,-78.77638507785095&z=18&output=embed",
     mapTitle: "Local Principal — Joyería Crespo Jara",
   },
   {
